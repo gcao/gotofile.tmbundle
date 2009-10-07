@@ -48,6 +48,7 @@ create_object(GoToFile, {
 	
 	
 	handle_search: function(value){
+	  if (value.length == 0 || value.substr(value.length - 1) == "\\") return;
 		GoToFile.instance.start_search(value);
 	},
 	
